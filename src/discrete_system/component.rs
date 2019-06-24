@@ -13,6 +13,10 @@ pub struct HandleInfo {
     pub current_time: Time,
 }
 
+/// `Component` represents an `Actor` from `ActorModel`
+/// It needs to be able to handle messages and send effect the system on
+/// start of this component
+
 pub trait Component<M: DiscreteSystemMessage>: Sized {
     fn start(&mut self, info: StartInfo) -> Effector<M, Self>;
     fn handle(&mut self, info: HandleInfo, message: M) -> Effector<M, Self>;

@@ -13,6 +13,10 @@ pub struct ScheduledEvent<M> {
     pub address: ScheduledEventAddress,
 }
 
+/// `Effector` keeps information about:
+/// - `events` which are to be processed by `DiscreteSystem`
+/// - `components` which are to be instantiated by `DiscreteSystem`
+
 pub struct Effector<M: DiscreteSystemMessage, C: Component<M>> {
     pub events: Vec<ScheduledEvent<M>>,
     pub components: Vec<C>,
