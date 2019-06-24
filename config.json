@@ -1,0 +1,37 @@
+{
+  "carousels": [
+    {
+      "id": 1,
+      "min_capacity": 5,
+      "capacity": 10,
+      "run_time": 10,
+      "wait_time": 10,
+      "extend_time": 30
+    },
+    {
+      "id": 2,
+      "min_capacity": 5,
+      "capacity": 10,
+      "run_time": 10,
+      "wait_time": 10,
+      "extend_time": 30
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "arrival_time": 10,
+      "carousels": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "arrival_time": 1,
+      "carousels": [
+        1
+      ]
+    }
+  ]
+}
